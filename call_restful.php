@@ -69,7 +69,7 @@ class CallRestful
      * @param $priKeyFile
      * @return string
      */
-    private function makeBaoKimAPISignature($method, $url, $getArgs = array(), $postArgs = array(), $priKeyFile)
+    public function makeBaoKimAPISignature($method, $url, $getArgs = array(), $postArgs = array(), $priKeyFile)
     {
         if (strpos($url, '?') !== false) {
             list($url, $get) = explode('?', $url);
@@ -89,7 +89,7 @@ class CallRestful
         return urlencode(base64_encode($signature));
     }
 
-    private function httpBuildQuery($formData, $numericPrefix = '', $argSeparator = '&', $arrName = '')
+    public function httpBuildQuery($formData, $numericPrefix = '', $argSeparator = '&', $arrName = '')
     {
         $query = array();
         foreach ($formData as $k => $v) {
@@ -104,7 +104,7 @@ class CallRestful
         return implode($argSeparator, $query);
     }
 
-    private function createRequestUrl($data)
+    public function createRequestUrl($data)
     {
         $params = $data;
         ksort($params);
