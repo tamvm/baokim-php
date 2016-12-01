@@ -43,6 +43,11 @@ class CallRestful
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
 
+        // Proxy
+        if (defined('API_PROXY')) {
+          curl_setopt($curl, CURLOPT_PROXY, API_PROXY);
+        }
+
         if ($method == 'POST') {
             curl_setopt($curl, CURLOPT_POSTFIELDS, $this->httpBuildQuery($arrayPost));
         }
