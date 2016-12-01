@@ -36,6 +36,7 @@ fuT/6oKHPqZpur2rNfEKVn5Aq2kmFrvyUhvXi0IAWQ/XS3XJ7faQnprrWT6pYiSy
 2YQuaghlNG1SATVd5eUadq2pA8DuSzqWFa0Ac1IAyliBO2uLPL7LzuEKmmuQk0vI
 TU2Q8idAb77K7mvVguA3LDhN
 -----END PRIVATE KEY-----');
+define('API_PROXY','http://abc:def@12.12.12.12:12345');       //API PASSWORD
 
 define('BAOKIM_API_SELLER_INFO','/payment/rest/payment_pro_api/get_seller_info');
 define('BAOKIM_API_PAY_BY_CARD','/payment/rest/payment_pro_api/pay_by_card');
